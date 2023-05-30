@@ -1,0 +1,154 @@
+@import "../../mixin.scss";
+
+
+
+.header__wrapper {
+  max-width: 1280px;
+  margin:0rem auto 4rem auto;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  @media screen and (max-width: 1280px) {
+    max-width: 900px;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 650px;
+  }
+  @media screen and (max-width: 650px) {
+    max-width: 550px;
+    
+  }
+
+  transform: matrix(0.001, 0, 0, 1, 0, 0);
+  animation: anim 2s forwards;
+}
+
+.block__backgr {
+  display: flex;
+  justify-content: space-around;
+  margin:  4rem 0px 0px 0px;
+  align-items: center;
+  padding: 0 10px;
+  
+  @media screen and (max-width: 900px) {
+    max-width: 768px;
+    margin: 4rem auto 0rem auto;
+  }
+  @media screen and (max-width: 580px) {
+    flex-direction: column-reverse;
+    margin: 8rem 0px 0px 0px;
+  }
+
+
+  .img_anim {
+    animation: img 6s ease-in-out forwards;
+    width: 400px;
+
+    height: 400px;
+    object-fit: contain;
+    @media screen and (max-width: 580px) {
+      width: 90%;
+      height: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  .img_anim1 {
+    animation: img1 6s ease-in-out forwards;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    @media screen and (max-width: 580px) {
+      width: 90%;
+      height: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  .img_anim2 {
+    animation: img2 6s ease-in-out forwards;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    @media screen and (max-width: 580px) {
+      width: 90%;
+      height: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .block__title {
+    color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    @media screen and (max-width: 580px) {
+      text-align: center;
+    }
+    .title {
+      font-size: 50px;
+    }
+    ul {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      li {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0px 0px 0px;
+        font-size: 16px;
+        &:last-child {
+          grid-column-end: span 2;
+        }
+        span {
+          margin-top: 8px;
+          color: #8f8d8d;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@keyframes anim {
+  to {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+}
+
+@keyframes img {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes img1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes img2 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
