@@ -13,7 +13,8 @@ function App() {
   let arrayImg = [
     <img className="img_anim" src="/img/header1.png" alt="" />,
     <img className="img_anim2" src="/img/header5.png" alt="" />,
-    <img className="img_anim1" src="/img/header4.png" alt="" />,
+    /*     <img className="img_anim1" src="/img/header4.png" alt="" />, */
+    <img className="img_anim1" src="/img/Кожанка/кожанка1.jpg" alt="" />,
   ];
 
   let arrayStudioFirst = [
@@ -109,6 +110,32 @@ function App() {
     <img src="/img/street/street4.JPG" alt="dasd" />,
     <img src="/img/street/street5.JPG" alt="dasd" />,
   ];
+  let arrayShops = [
+    <img src="/img/shops/shops1.jpg" alt="dasd" />,
+    <img src="/img/shops/shops2.jpg" alt="dasd" />,
+    <img src="/img/shops/shops3.jpg" alt="dasd" />,
+    <img src="/img/shops/shops4.jpg" alt="dasd" />,
+    <img src="/img/shops/shops5.jpg" alt="dasd" />,
+    <img src="/img/shops/shops6.jpg" alt="dasd" />,
+    <img src="/img/shops/shops7.jpg" alt="dasd" />,
+  ];
+  let arrayKyrtki = [
+    <img src="/img/Куртки/куртка1.jpg" alt="dasd" />,
+    <img src="/img/Куртки/куртка2.jpg" alt="dasd" />,
+    <img src="/img/Куртки/куртка3.jpg" alt="dasd" />,
+    <img src="/img/Куртки/куртка4.jpg" alt="dasd" />,
+    <img src="/img/Куртки/куртка5.jpg" alt="dasd" />,
+    <img src="/img/Куртки/куртка6.jpg" alt="dasd" />,
+    <img src="/img/Куртки/куртка7.jpg" alt="dasd" />,
+  ];
+  let arrayKojanka = [
+    <img src="/img/Кожанка/кожанка1.jpg" alt="dasd" />,
+    <img src="/img/Кожанка/кожанка2.jpg" alt="dasd" />,
+    <img src="/img/Кожанка/кожанка3.jpg" alt="dasd" />,
+    <img src="/img/Кожанка/кожанка4.jpg" alt="dasd" />,
+    <img src="/img/Кожанка/кожанка5.jpg" alt="dasd" />,
+    <img src="/img/Кожанка/кожанка6.jpg" alt="dasd" />,
+  ];
 
   React.useEffect(() => {
     const intervalId = setInterval(() => {
@@ -142,6 +169,9 @@ function App() {
                 arrayTShirts={arrayTShirts}
                 arraySportSuilNew={arraySportSuilNew}
                 arrayStreet={arrayStreet}
+                arrayShops={arrayShops}
+                arrayKyrtki={arrayKyrtki}
+                arrayKojanka={arrayKojanka}
               />
             }
           />

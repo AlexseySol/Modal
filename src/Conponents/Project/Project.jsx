@@ -9,6 +9,9 @@ import SwipTermo from "./Swiper/SwipTermo";
 import SwipNewSuit from "./Swiper/SwipNewSuit";
 import SwipTShirts from "./Swiper/SwipTShirts";
 import SwipStreet from "./Swiper/SwipStreet";
+import SwipKyjanka from "./Swiper/SwipKyjanka";
+import SwipShops from "./Swiper/SwipShops";
+import SwipKyrtki from "./Swiper/SwipKyrtki";
 
 export function Project({
   arrayStudioFirst,
@@ -20,6 +23,9 @@ export function Project({
   arraySportSuilNew,
   arrayTShirts,
   arrayStreet,
+  arrayKojanka,
+  arrayKyrtki,
+  arrayShops,
 }) {
   const [visibil, setVisibil] = React.useState(false);
 
@@ -32,6 +38,10 @@ export function Project({
   const [newSuit, setNewSuit] = React.useState(false);
   const [tShirts, setTShirts] = React.useState(false);
   const [street, setStreet] = React.useState(false);
+
+  const [kojanka, setKojanka] = React.useState(false);
+  const [kyrtki, setKyrtki] = React.useState(false);
+  const [shops, setShops] = React.useState(false);
 
   React.useEffect(() => {
     const toggleVisibility = () => {
@@ -105,10 +115,64 @@ export function Project({
         false
       )}
 
+      {shops ? (
+        <SwipShops setShops={setShops} arrayShops={arrayShops} />
+      ) : (
+        false
+      )}
+
+      {kyrtki ? (
+        <SwipKyrtki setKyrtki={setKyrtki} arrayKyrtki={arrayKyrtki} />
+      ) : (
+        false
+      )}
+      {kojanka ? (
+        <SwipKyjanka setKojanka={setKojanka} arrayKojanka={arrayKojanka} />
+      ) : (
+        false
+      )}
+
       <div className="project__wrapper">
         <h2 className="project__title">Project</h2>
         <div className="project__cardwrapper">
           {/* new  костюмы */}
+
+          <div
+            className="project__card"
+            onClick={() => setKojanka((prev) => !prev)}
+          >
+            <img
+              className="project__card_img"
+              src="/img/Кожанка/кожанка3.jpg"
+              alt="asd"
+            />
+            <h4>Model #1</h4>
+          </div>
+
+          <div
+            className="project__card"
+            onClick={() => setShops((prev) => !prev)}
+          >
+            <img
+              className="project__card_img"
+              src="/img/shops/shops3.jpg"
+              alt="asd"
+            />
+            <h4>Model #3</h4>
+          </div>
+
+          <div
+            className="project__card"
+            onClick={() => setKyrtki((prev) => !prev)}
+          >
+            <img
+              className="project__card_img"
+              src="/img/Куртки/куртка6.jpg"
+              alt="asd"
+            />
+            <h4>Model #3</h4>
+          </div>
+
           <div
             className="project__card"
             onClick={() => setNewSuit((prev) => !prev)}
@@ -120,6 +184,7 @@ export function Project({
             />
             <h4>Tracksuits</h4>
           </div>
+
           {/* new футболки */}
           <div
             className="project__card"
